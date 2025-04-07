@@ -1,46 +1,80 @@
-### This repository is no longer maintained!
+# 🚀 Node.js App CI/CD with Docker & GitHub Actions
 
-**For the most up to date test app to get you started on Heroku, head on over to [`node-js-getting-started`](https://github.com/heroku/node-js-getting-started).**
+[![Build and Push Docker Image](https://github.com/its-tsukii/ci-cd-nodejs-docker-demo/actions/workflows/main.yml/badge.svg)](https://github.com/its-tsukii/ci-cd-nodejs-docker-demo/actions/workflows/main.yml)
+
+This project demonstrates a simple yet powerful DevOps pipeline that:
+
+- Dockerizes a Node.js application
+- Builds the Docker image using GitHub Actions
+- Pushes the image to Docker Hub automatically on every `push` to the `main` branch
 
 ---
 
-# node-js-sample
+## 📦 Docker Image
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+👉 [blackplayer1001/node-app on Docker Hub](https://hub.docker.com/r/blackplayer1001/node-app)
 
-## Running Locally
+---
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+## 🛠️ Tech Stack
 
-```sh
-git clone git@github.com:heroku/node-js-sample.git # or clone your own fork
-cd node-js-sample
-npm install
-npm start
-```
+- Node.js
+- Docker
+- GitHub Actions (CI/CD)
+- Docker Hub
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+---
 
-## Deploying to Heroku
+## 📁 Project Structure
 
-```
-heroku create
-git push heroku master
-heroku open
-```
+. ├── .github 
+  │ └── workflows 
+  │ └── docker-publish.yml # CI/CD Workflow file 
+  ├── Dockerfile # Docker build config 
+  ├── index.js # Main application file 
+  ├── package.json 
+  └── README.md
 
-Alternatively, you can deploy your own copy of the app using the web-based flow:
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-## Documentation
+---
 
-For more information about using Node.js on Heroku, see these Dev Center articles:
+## ⚙️ How It Works
 
-- [10 Habits of a Happy Node Hacker](https://blog.heroku.com/archives/2014/3/11/node-habits)
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
-# trigger workflow
-# Trigger Docker push
+1. On every push to the `main` branch:
+   - GitHub Actions triggers a workflow
+   - Builds the Docker image using your `Dockerfile`
+   - Logs into Docker Hub using secrets (`DOCKER_USERNAME`, `DOCKER_PASSWORD`)
+   - Pushes the image to your Docker Hub repository
+
+2. Done! Your Docker image is live and ready to deploy anywhere.
+
+---
+
+## 🚀 Getting Started Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/its-tsukii/ci-cd-nodejs-docker-demo.git
+cd ci-cd-nodejs-docker-demo
+
+# Build the Docker image
+docker build -t node-app .
+
+# Run the container
+docker run -p 3000:3000 node-app
+
+# Open in browser
+http://localhost:3000
+
+🔐 GitHub Secrets Required
+Make sure to add the following secrets in your GitHub repo:
+
+Secret Name	Value
+DOCKER_USERNAME	your Docker Hub username
+DOCKER_PASSWORD	your Docker Hub password/token
+
+🙌 Credits
+Original code: heroku/node-js-sample
+
+CI/CD and Docker pipeline by @its-tsukii
