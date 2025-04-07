@@ -28,12 +28,12 @@ This project demonstrates a simple yet powerful DevOps pipeline that:
 ## 📁 Project Structure
 
 . ├── .github 
-  /n│ └── workflows 
-  │ └── docker-publish.yml # CI/CD Workflow file 
-  ├── Dockerfile # Docker build config 
-  ├── index.js # Main application file 
-  ├── package.json 
-  └── README.md
+    │ └── workflows 
+    │ └── docker-publish.yml # CI/CD Workflow file 
+    ├── Dockerfile # Docker build config 
+    ├── index.js # Main application file 
+    ├── package.json 
+    └── README.md
 
 
 
