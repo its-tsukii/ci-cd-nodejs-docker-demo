@@ -90,7 +90,7 @@ CI/CD and Docker pipeline by @its-tsukii
 **Aayush Kukade**
 
 - 🌐 [LinkedIn](https://www.linkedin.com/in/aayushkukade/)
-- 📖 [Medium Blog for Task 1]([https://your-medium-blog-link.com](https://medium.com/@sroy10012001/ci-cd-with-github-actions-and-docker-task-1-of-my-devops-internship-16008e3c6d1d))
-- 🧭 [30 Days DevOps Internship – Master Blog]([https://your-master-blog-link.com](https://medium.com/@sroy10012001/my-devops-internship-journey-with-elevate-labs-30-days-of-learning-d7252e409a20))
+- 📖 [Medium Blog for Task 1](https://medium.com/@sroy10012001/ci-cd-with-github-actions-and-docker-task-1-of-my-devops-internship-16008e3c6d1d)
+- 🧭 [30 Days DevOps Internship – Master Blog](https://medium.com/@sroy10012001/my-devops-internship-journey-with-elevate-labs-30-days-of-learning-d7252e409a20)
 
 Bravo Scrolling to the End , Here You Deserve a cookie 🍪
